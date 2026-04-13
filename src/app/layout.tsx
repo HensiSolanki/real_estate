@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Noto_Sans_Arabic } from "next/font/google";
+import Header from "@/components/Header/Header";
+import ToastWrapper from "@/components/toastWrapper/index";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +12,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+/** Clean UI sans for header / body copy (aqar-style) */
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const notoArabic = Noto_Sans_Arabic({
+  variable: "--font-noto-arabic",
+  subsets: ["arabic"],
+  weight: ["600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +41,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoArabic.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col bg-white font-[family-name:var(--font-inter),ui-sans-serif,system-ui,sans-serif] text-[#171717] dark:bg-white dark:text-[#171717]">
+        <ToastWrapper />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
