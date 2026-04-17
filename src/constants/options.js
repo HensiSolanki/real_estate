@@ -23,6 +23,8 @@ export const realEstateCardDefaultListing = {
         "Luxury apartment for annual rent in Al-Arid district, ref a1005. Spacious layout with premium finishes. Immediate response upon contact.",
     agentInitials: "AR",
     agentName: "Ahmed Real Estate",
+    agentPhone: "+91 98765 43210",
+    agencyName: "NESTWAY PROPERTIES",
     listedAgo: "Listed 2 days ago",
     photoLabel: "1/6 photos",
 };

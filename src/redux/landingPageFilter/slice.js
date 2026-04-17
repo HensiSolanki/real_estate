@@ -4,6 +4,8 @@ import { listingOptionsFilter, propertyOptionsFilter } from "@/constants/options
 const initialState = {
     listingOptions: listingOptionsFilter[0],
     propertyOptions: propertyOptionsFilter[0],
+    callNowPopupOpen: false,
+    callNowPopupTargetId: null,
     isLoading: false,
     error: null,
 };
@@ -17,6 +19,15 @@ const landingPageFilterSlice = createSlice({
         },
         setPropertyOptions: (state, { payload }) => {
             state.propertyOptions = payload;
+        },
+        setCallNowPopupOpen: (state, { payload }) => {
+            state.callNowPopupOpen = payload;
+            if (!payload) {
+                state.callNowPopupTargetId = null;
+            }
+        },
+        setCallNowPopupTargetId: (state, { payload }) => {
+            state.callNowPopupTargetId = payload;
         },
         setIsLoading: (state, { payload }) => {
             state.isLoading = payload;
@@ -55,6 +66,8 @@ export const landingPageFilterSliceReducer = landingPageFilterSlice.reducer;
 export const {
     setListingOptions,
     setPropertyOptions,
+    setCallNowPopupOpen,
+    setCallNowPopupTargetId,
     setIsLoading,
-    setError
+    setError,
 } = landingPageFilterSlice.actions;
