@@ -3,11 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Aligned with @theme --color-brand; usable in styled-components and plain CSS. */
+  --color-brand: #ce1126;
+  --color-brand-foreground: #8a0a1c;
+  --color-brand-soft: #fcf2f3;
+  --color-brand-soft-strong: #f5e0e3;
 }
 
 /* Use one slug after --color- (e.g. brand); names like brand-green are parsed as a broken palette scale. */
 @theme {
-  --color-brand: #1b5e38;
+  --color-brand: #ce1126;
   --color-muted: #555555;
 }
 

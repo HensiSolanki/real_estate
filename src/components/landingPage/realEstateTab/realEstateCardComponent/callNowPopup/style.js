@@ -36,7 +36,7 @@ export const AgencyTitle = styled.p`
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #6ca5ff;
+  color: #ff8a96;
 `;
 
 export const CloseButton = styled.button`
@@ -78,8 +78,8 @@ export const AgentAvatar = styled.div`
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #2f4e7e;
-  color: #9ec4ff;
+  background: #6d1520;
+  color: #ffc8ce;
   font-size: 18px;
   font-weight: 700;
 `;
@@ -105,8 +105,8 @@ export const AgentVerified = styled.span`
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
-  background: #2d7b33;
-  color: #ddffd7;
+  background: #8a1522;
+  color: #ffe8ea;
 `;
 
 export const ContactCard = styled.div`
@@ -126,7 +126,7 @@ export const ContactLabel = styled.p`
 export const ContactPhone = styled.a`
   margin-top: 6px;
   display: inline-block;
-  color: #74b0ff;
+  color: #ff9aa8;
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;

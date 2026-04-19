@@ -50,9 +50,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b border-neutral-200/80 bg-white text-[15px] font-medium leading-none tracking-[-0.01em] text-neutral-800 dark:bg-white ${fontUi}`}
+      className={`sticky top-0 z-40 overflow-x-hidden border-b border-neutral-200/80 bg-white text-[15px] font-medium leading-none tracking-[-0.01em] text-neutral-800 dark:bg-white ${fontUi}`}
     >
-      <div className="relative mx-auto flex h-[52px] w-full max-w-[1280px] items-center px-[7px] min-[641px]:px-[32px] lg:px-[110px]">
+      <div className="relative mx-auto flex h-[52px] w-full min-w-0 max-w-[1280px] items-center px-[7px] min-[641px]:px-[32px] lg:px-[110px]">
         <div className="flex min-w-0 flex-1 justify-start">
           <Link
             href="/"
@@ -79,7 +79,7 @@ export default function Header() {
         </div>
 
         <nav
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex"
+          className="absolute left-1/2 z-10 hidden max-w-[min(520px,calc(100%-15rem))] -translate-x-1/2 items-center gap-3 md:flex md:gap-4 lg:max-w-none lg:gap-9"
           aria-label={t("navMain")}
         >
           {MAIN_TABS.map(({ index, labelKey, Icon }) => {
@@ -90,7 +90,7 @@ export default function Header() {
                 type="button"
                 onClick={() => dispatch(setHeaderTabOptions(index))}
                 className={[
-                  "flex items-center gap-2 border-b-2 pb-1 text-[14px] transition-colors",
+                  "flex shrink-0 items-center gap-1.5 border-b-2 pb-1 text-[12px] transition-colors sm:gap-2 sm:text-[13px] lg:text-[14px]",
                   active
                     ? "border-brand text-brand"
                     : "border-transparent text-muted hover:text-neutral-700",
@@ -103,7 +103,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden min-w-0 flex-1 items-center justify-end gap-5 text-[14px] font-medium md:flex">
+        <div className="relative z-20 hidden min-w-0 flex-1 items-center justify-end gap-2 text-[12px] font-medium md:flex md:gap-3 lg:gap-5 lg:text-[14px]">
           <LanguageSwitcher />
           {RIGHT.map((item) => {
             const Icon = item.Icon;
@@ -143,7 +143,7 @@ export default function Header() {
           </Link>
           <Link
             href="/add-listing"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#008a3d] text-xl leading-none text-white transition-opacity hover:opacity-90"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand text-xl leading-none text-white transition-opacity hover:opacity-90"
             aria-label={t("ariaAddListing")}
           >
             +
@@ -162,7 +162,7 @@ export default function Header() {
 
       <div className="border-t border-neutral-200/70 md:hidden">
         <nav
-          className="mx-auto flex w-full max-w-[1280px] items-center"
+          className="mx-auto flex w-full min-w-0 max-w-[1280px] items-center px-[7px]"
           aria-label={t("navMobile")}
         >
           {MAIN_TABS.map(({ index, labelKey, Icon }) => {

@@ -1,43 +1,70 @@
 import styled from "styled-components";
 
+/** Clips any stray overflow; inner track scrolls horizontally. */
 export const FilterSection = styled.section`
   width: 100%;
-  background: #f4f7f8;
-  border-bottom: 1px solid #dbe3e6;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #faf6f6;
+  border-bottom: 1px solid #e8dfe1;
+  overflow-x: hidden;
 `;
 
+/**
+ * Same horizontal inset as the header shell and listing cards:
+ * `px-1.5` (7px) · `min-[641px]:px-8` (32px) · `lg:px-[110px]`.
+ */
 export const FilterInner = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1280px;
-  padding: 6px 28px;
-  display: flex;
-  justify-content: flex-start;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 6px 7px;
+  display: block;
 
-  @media (min-width: 640px) {
+  @media (min-width: 641px) {
     padding: 6px 32px;
   }
 
   @media (min-width: 1024px) {
     padding: 6px 110px;
   }
+`;
 
-  @media (max-width: 640px) {
-    padding: 6px 7px;
-    justify-content: flex-start;
-    overflow-x: auto;
+/** Scrolls the filter controls when they exceed the content width. */
+export const FilterToolbarScroll = styled.div`
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+  padding-bottom: 4px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 4px;
   }
 `;
 
 export const FilterWrapper = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 8px;
   background: transparent;
-  width: fit-content;
+  width: max-content;
   margin: 0;
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 `;
@@ -45,6 +72,7 @@ export const FilterWrapper = styled.div`
 export const FilterActionButton = styled.button`
   font-family: inherit;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   gap: 7px;
@@ -62,8 +90,8 @@ export const FilterActionButton = styled.button`
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    background: #edf3f5;
-    border-color: #cfd8db;
+    background: var(--color-brand-soft);
+    border-color: #e2d5d8;
   }
 `;
 
@@ -80,6 +108,7 @@ export const FilterActionIcon = styled.span`
 
 export const SegmentGroup = styled.div`
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   background: #ffffff;
   border: 1px solid #d8e0e2;
@@ -91,7 +120,8 @@ export const SegmentButton = styled.button`
   font-family: inherit;
   border: none;
   border-right: 1px solid #d8e0e2;
-  background: ${({ $active }) => ($active ? "#2f9f52" : "transparent")};
+  background: ${({ $active }) =>
+    $active ? "var(--color-brand)" : "transparent"};
   color: ${({ $active }) => ($active ? "#ffffff" : "#5f6c72")};
   font-size: 13px;
   font-weight: 600;
@@ -107,6 +137,122 @@ export const SegmentButton = styled.button`
   }
 
   &:hover {
-    background: ${({ $active }) => ($active ? "#2f9f52" : "#edf3f5")};
+    background: ${({ $active }) =>
+      $active ? "var(--color-brand)" : "var(--color-brand-soft)"};
   }
+`;
+
+export const CityPanelSection = styled.div`
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  border-top: 1px solid #e8dfe1;
+  background: #ffffff;
+`;
+
+export const CityPanelInner = styled.div`
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 7px 16px;
+
+  @media (min-width: 641px) {
+    padding: 14px 32px 18px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 14px 110px 18px;
+  }
+`;
+
+export const CityPanelTitle = styled.p`
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-brand);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+`;
+
+export const CityPanelScroller = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  @media (min-width: 640px) {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #e5e7eb transparent;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #e5e7eb;
+      border-radius: 4px;
+    }
+  }
+`;
+
+export const CityPill = styled.button`
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-height: 46px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid ${({ $selected }) => ($selected ? "var(--color-brand)" : "#e5e7eb")};
+  background: ${({ $selected }) =>
+    $selected ? "var(--color-brand-soft)" : "#ffffff"};
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: ${({ $selected }) =>
+    $selected ? "0 0 0 1px rgba(206, 17, 38, 0.12)" : "none"};
+
+  @media (min-width: 640px) {
+    flex: 0 0 auto;
+    min-width: min(140px, 100%);
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    border-color: var(--color-brand);
+    background: var(--color-brand-soft);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+`;
+
+export const CityPillName = styled.span`
+  font-size: 13px;
+  font-weight: 600;
+  color: ${({ $selected }) => ($selected ? "var(--color-brand)" : "#2563eb")};
+  line-height: 1.2;
+`;
+
+export const CityPillCount = styled.span`
+  font-size: 12px;
+  font-weight: 500;
+  color: #9ca3af;
+  white-space: nowrap;
 `;

@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Noto_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import type { Locale } from "next-intl";
 
+import Footer from "@/components/footer";
 import { routing } from "@/i18n/routing";
 import { Providers } from "../providers";
 

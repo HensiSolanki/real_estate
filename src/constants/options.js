@@ -10,7 +10,7 @@ export const realEstateCardFeatureOptions = [
 /** Default field values for a single `RealEstateCardComponent` when `listing` is partial or empty. */
 export const realEstateCardDefaultListing = {
     tags: [
-        { label: "For Rent", variant: "green" },
+        { label: "For Rent", variant: "brand" },
         { label: "Apartment", variant: "muted" },
         { label: "Luxury", variant: "blue" },
     ],
@@ -49,7 +49,7 @@ export const realEstateCardDemoListings = [
         photoLabel: "1/8 photos",
         listedAgo: "Listed 5 days ago",
         tags: [
-            { label: "For Rent", variant: "green" },
+            { label: "For Rent", variant: "brand" },
             { label: "Villa", variant: "muted" },
             { label: "Luxury", variant: "blue" },
         ],
@@ -63,7 +63,7 @@ export const realEstateCardDemoListings = [
         photoLabel: "1/4 photos",
         listedAgo: "Listed 1 week ago",
         tags: [
-            { label: "For Sale", variant: "green" },
+            { label: "For Sale", variant: "brand" },
             { label: "Apartment", variant: "muted" },
         ],
     },
@@ -89,7 +89,7 @@ export const realEstateCardDemoListings = [
         photoLabel: "1/10 photos",
         listedAgo: "Listed today",
         tags: [
-            { label: "For Rent", variant: "green" },
+            { label: "For Rent", variant: "brand" },
             { label: "Penthouse", variant: "muted" },
             { label: "Luxury", variant: "blue" },
         ],
@@ -112,4 +112,14 @@ export const propertyOptionsFilter = [
     "Commercial Offices ",
     "Farms ",
     "Rest Houses ",
+];
+
+/** Demo listing counts per city (replace with API data when available). */
+export const cityFilterOptions = [
+    { id: "riyadh", count: 82910 },
+    { id: "jeddah", count: 33414 },
+    { id: "dammam", count: 7180 },
+    { id: "khobar", count: 6655 },
+    { id: "medina", count: 4634 },
+    { id: "mecca", count: 3918 },
 ];

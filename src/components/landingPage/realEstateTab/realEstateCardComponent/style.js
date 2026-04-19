@@ -1,25 +1,21 @@
 import styled from "styled-components";
 
 /**
- * Horizontal insets match `FilterInner` (filter row) and header shell (`max-w` 1280px + same padding),
- * so the card lines up with the Filters control on the left and the header actions on the right.
+ * Horizontal insets match `FilterInner` and the header: 7px · 32px (641+) · 110px (1024+).
  */
 export const CardWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1280px;
-  padding: 18px 28px 0;
+  box-sizing: border-box;
+  padding: 18px 7px 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: 641px) {
     padding: 20px 32px 0;
   }
 
   @media (min-width: 1024px) {
     padding: 22px 110px 0;
-  }
-
-  @media (max-width: 640px) {
-    padding: 14px 7px 0;
   }
 `;
 
@@ -94,13 +90,13 @@ export const Tag = styled.span`
   line-height: 1.25;
   white-space: nowrap;
   background: ${({ $variant }) =>
-    $variant === "green"
-      ? "#2f9f52"
+    $variant === "brand"
+      ? "var(--color-brand)"
       : $variant === "blue"
         ? "#2563eb"
-        : "#edf3f5"};
+        : "var(--color-brand-soft)"};
   color: ${({ $variant }) =>
-    $variant === "green" || $variant === "blue"
+    $variant === "brand" || $variant === "blue"
       ? "#ffffff"
       : "#5f6c72"};
 `;
@@ -114,7 +110,7 @@ export const PriceMain = styled.div`
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1b5e38;
+  color: var(--color-brand-foreground);
   line-height: 1.15;
 `;
 
@@ -205,7 +201,7 @@ export const Avatar = styled.span`
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  background: #2563eb;
+  background: var(--color-brand);
   color: #ffffff;
   font-size: 10px;
   font-weight: 700;
@@ -258,8 +254,8 @@ export const OutlineButton = styled.button`
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    background: #edf3f5;
-    border-color: #cfd8db;
+    background: var(--color-brand-soft);
+    border-color: #e2d5d8;
   }
 `;
 
@@ -272,7 +268,7 @@ export const PrimaryButton = styled.button`
   padding: 6px 10px;
   border-radius: 6px;
   border: none;
-  background: #1b5e38;
+  background: var(--color-brand);
   color: #ffffff;
   font-size: 10px;
   font-weight: 600;
@@ -280,7 +276,7 @@ export const PrimaryButton = styled.button`
   transition: background-color 0.2s ease, filter 0.2s ease;
 
   &:hover {
-    filter: brightness(1.05);
+    filter: brightness(1.08);
   }
 `;
 
@@ -289,8 +285,8 @@ export const MediaColumn = styled.div`
   flex: 0 0 42%;
   min-width: 0;
   min-height: 220px;
-  background: #eef3f5;
-  border-left: 1px solid #dbe3e6;
+  background: var(--color-brand-soft);
+  border-left: 1px solid #e8dfe1;
 
   @media (max-width: 800px) {
     flex: none;

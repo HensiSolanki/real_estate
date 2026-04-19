@@ -1,13 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { listingOptionsFilter, propertyOptionsFilter } from "@/constants/options";
+import {
+    cityFilterOptions as defaultCityFilterOptions,
+    listingOptionsFilter,
+    propertyOptionsFilter,
+} from "@/constants/options";
 
 const initialState = {
     listingOptions: listingOptionsFilter[0],
     propertyOptions: propertyOptionsFilter[0],
+    selectedCity: null,
     callNowPopupOpen: false,
     callNowPopupTargetId: null,
     isLoading: false,
     error: null,
+    cityFilterOptions: defaultCityFilterOptions,
 };
 
 const landingPageFilterSlice = createSlice({
@@ -20,6 +26,9 @@ const landingPageFilterSlice = createSlice({
         setPropertyOptions: (state, { payload }) => {
             state.propertyOptions = payload;
         },
+        setSelectedCity: (state, { payload }) => {
+            state.selectedCity = payload;
+        },
         setCallNowPopupOpen: (state, { payload }) => {
             state.callNowPopupOpen = payload;
             if (!payload) {
@@ -28,6 +37,9 @@ const landingPageFilterSlice = createSlice({
         },
         setCallNowPopupTargetId: (state, { payload }) => {
             state.callNowPopupTargetId = payload;
+        },
+        setCityFilterOptions: (state, { payload }) => {
+            state.cityFilterOptions = payload;
         },
         setIsLoading: (state, { payload }) => {
             state.isLoading = payload;
@@ -66,8 +78,10 @@ export const landingPageFilterSliceReducer = landingPageFilterSlice.reducer;
 export const {
     setListingOptions,
     setPropertyOptions,
+    setSelectedCity,
     setCallNowPopupOpen,
     setCallNowPopupTargetId,
+    setCityFilterOptions,
     setIsLoading,
     setError,
 } = landingPageFilterSlice.actions;

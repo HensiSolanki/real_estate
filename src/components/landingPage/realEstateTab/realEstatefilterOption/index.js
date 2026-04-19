@@ -1,32 +1,76 @@
 "use client";
 
+import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useDispatch, useSelector } from "react-redux";
+
 import { SearchIconSvg } from "@/assets";
+import { listingOptionsFilter, propertyOptionsFilter } from "@/constants/options";
 import {
+    setListingOptions,
+    setPropertyOptions,
+    setSelectedCity,
+} from "@/redux/landingPageFilter/slice";
+
+import {
+    CityPanelInner,
+    CityPanelScroller,
+    CityPanelSection,
+    CityPanelTitle,
+    CityPill,
+    CityPillCount,
+    CityPillName,
     FilterActionButton,
     FilterActionIcon,
     FilterInner,
     FilterSection,
+    FilterToolbarScroll,
     FilterWrapper,
     SegmentButton,
     SegmentGroup,
 } from "./style";
-import { useDispatch, useSelector } from "react-redux";
-import { listingOptionsFilter, propertyOptionsFilter } from "@/constants/options";
-import { setListingOptions, setPropertyOptions } from "@/redux/landingPageFilter/slice";
+
+const PROPERTY_SEGMENT_KEYS = {
+    "All Type": "segment_allType",
+    Apartments: "segment_apartments",
+    Lands: "segment_lands",
+    Villas: "segment_villas",
+    Floors: "segment_floors",
+    "Commercial Offices": "segment_commercial",
+    Farms: "segment_farms",
+    "Rest Houses": "segment_restHouses",
+};
+
+function propertySegmentLabel(option, t) {
+    const trimmed = typeof option === "string" ? option.trim() : option;
+    const key = PROPERTY_SEGMENT_KEYS[trimmed];
+    return key ? t(key) : trimmed;
+}
+
+function formatCount(n, locale) {
+    const loc = locale === "ar" ? "ar-SA" : "en-US";
+    return n.toLocaleString(loc);
+}
 
 const RealEstateFilterOption = () => {
-    const { listingOptions, propertyOptions } = useSelector(state => state.landingPageFilterSlice);
+    const t = useTranslations("RealEstateFilter");
+    const locale = useLocale();
+    const { listingOptions, propertyOptions, selectedCity, cityFilterOptions } =
+        useSelector((state) => state.landingPageFilterSlice);
+    const cityFilterOptionsData = cityFilterOptions ?? [];
+    const [cityPanelOpen, setCityPanelOpen] = useState(false);
     const dispatch = useDispatch();
 
     return (
         <FilterSection>
             <FilterInner>
+                <FilterToolbarScroll aria-label={t("filtersToolbarAria")}>
                 <FilterWrapper>
-                    <FilterActionButton type="button" aria-label="Open filters">
+                    <FilterActionButton type="button" aria-label={t("filtersAria")}>
                         <FilterActionIcon aria-hidden="true">
                             <SearchIconSvg />
                         </FilterActionIcon>
-                        Filters
+                        {t("filters")}
                     </FilterActionButton>
 
                     <SegmentGroup>
@@ -50,12 +94,68 @@ const RealEstateFilterOption = () => {
                                 $active={propertyOptions === option}
                                 onClick={() => dispatch(setPropertyOptions(option))}
                             >
-                                {option}
+                                {propertySegmentLabel(option, t)}
                             </SegmentButton>
                         ))}
                     </SegmentGroup>
+
+                    <SegmentGroup>
+                        <SegmentButton
+                            id="city-filter-toggle"
+                            type="button"
+                            $active={cityPanelOpen}
+                            aria-expanded={cityPanelOpen}
+                            aria-controls="city-filter-panel"
+                            onClick={() => setCityPanelOpen((open) => !open)}
+                        >
+                            {t("segment_city")}
+                        </SegmentButton>
+                    </SegmentGroup>
                 </FilterWrapper>
+                </FilterToolbarScroll>
             </FilterInner>
+
+            {cityPanelOpen ? (
+                <CityPanelSection
+                    id="city-filter-panel"
+                    role="region"
+                    aria-labelledby="city-filter-toggle"
+                    aria-label={t("cityPanelRegion")}
+                >
+                    <CityPanelInner>
+                        <CityPanelTitle>{t("cityPanelTitle")}</CityPanelTitle>
+                        <CityPanelScroller>
+                            {cityFilterOptionsData.map(({ id, count }) => {
+                                const selected = selectedCity === id;
+                                return (
+                                    <CityPill
+                                        key={id}
+                                        type="button"
+                                        $selected={selected}
+                                        onClick={() =>
+                                            dispatch(
+                                                setSelectedCity(selected ? null : id),
+                                            )
+                                        }
+                                        aria-pressed={selected}
+                                        aria-label={t("cityOptionAria", {
+                                            city: t(`city_${id}`),
+                                            count: formatCount(count, locale),
+                                        })}
+                                    >
+                                        <CityPillName $selected={selected}>
+                                            {t(`city_${id}`)}
+                                        </CityPillName>
+                                        <CityPillCount>
+                                            ({formatCount(count, locale)})
+                                        </CityPillCount>
+                                    </CityPill>
+                                );
+                            })}
+                        </CityPanelScroller>
+                    </CityPanelInner>
+                </CityPanelSection>
+            ) : null}
         </FilterSection>
     );
 };
