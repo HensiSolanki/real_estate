@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
+import { setCityPopUpOpen } from "@/redux/landingPageFilter/slice";
 
 import {
     FilterBar,
@@ -19,11 +21,12 @@ import {
     normalizeDate,
     parseDateKey,
 } from "@/utils/globalFunctions";
+import CityPopUpModel from "../popUpModels/cityPopUp/index.js";
 
 const DailyRentFilterOption = () => {
-    const { dailyrentStartDate, dailyrentEndDate } = useSelector(
-        (state) => state.landingPageFilterSlice,
-    );
+    const dispatch = useDispatch();
+    const { dailyrentStartDate, dailyrentEndDate, cityPopUpOpen, dailyrentCity } =
+        useSelector((state) => state.landingPageFilterSlice);
     const [calendarOpen, setCalendarOpen] = useState(false);
 
     const today = useMemo(() => normalizeDate(new Date()), []);
@@ -49,13 +52,20 @@ const DailyRentFilterOption = () => {
                 <FilterBar role="toolbar" aria-label="Daily rent filters">
                     {dailyRentFilterOptions.map(({ id, label, icon: Icon }) => {
                         const isDateFilter = id === "date";
-                        const isActive = isDateFilter ? dateFilterActive : false;
+                        const isCityFilter = id === "city";
+                        const isActive = isDateFilter
+                            ? dateFilterActive
+                            : isCityFilter
+                              ? cityPopUpOpen || Boolean(dailyrentCity)
+                              : false;
                         const displayLabel = isDateFilter
                             ? formatDateChipLabel(
                                 selectedStartDate ?? today,
                                 selectedEndDate ?? tomorrow,
                             )
-                            : label;
+                            : isCityFilter
+                              ? (dailyrentCity ?? label)
+                              : label;
 
                         if (isDateFilter) {
                             return (
@@ -75,6 +85,27 @@ const DailyRentFilterOption = () => {
                                         <FilterButtonText>{displayLabel}</FilterButtonText>
                                     </FilterButton>
                                 </div>
+                            );
+                        }
+
+                        if (isCityFilter) {
+                            return (
+                                <FilterButton
+                                    key={id}
+                                    type="button"
+                                    $active={isActive}
+                                    $compact
+                                    aria-pressed={isActive}
+                                    aria-expanded={cityPopUpOpen}
+                                    onClick={() =>
+                                        dispatch(setCityPopUpOpen(!cityPopUpOpen))
+                                    }
+                                >
+                                    <FilterButtonIcon aria-hidden="true">
+                                        <Icon />
+                                    </FilterButtonIcon>
+                                    <FilterButtonText>{displayLabel}</FilterButtonText>
+                                </FilterButton>
                             );
                         }
 
@@ -100,6 +131,7 @@ const DailyRentFilterOption = () => {
                 isOpen={calendarOpen}
                 onClose={() => setCalendarOpen(false)}
             />
+            <CityPopUpModel />
         </FilterSection>
     );
 };

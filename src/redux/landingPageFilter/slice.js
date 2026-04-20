@@ -28,7 +28,10 @@ const initialState = {
     //daily rent tab
     dailyrentStartDate: formatDateKey(todayDate),
     dailyrentEndDate: formatDateKey(tomorrowDate),
-    dailyrentCity: "Riyadh",
+    /** `null` until the user picks a city in the daily-rent city modal (chip shows "Choose city"). */
+    dailyrentCity: null,
+    cityPopUpOpen: false,
+    selectedCityPopUpOptions: null,
 };
 
 const landingPageFilterSlice = createSlice({
@@ -66,6 +69,15 @@ const landingPageFilterSlice = createSlice({
         setDailyrentEndDate: (state, { payload }) => {
             state.dailyrentEndDate = payload;
         },
+        setCityPopUpOpen: (state, { payload }) => {
+            state.cityPopUpOpen = payload;
+        },
+        setDailyrentCity: (state, { payload }) => {
+            state.dailyrentCity = payload;
+        },
+        setSelectedCityPopUpOptions: (state, { payload }) => {
+            state.selectedCityPopUpOptions = payload;
+        },  
         setIsLoading: (state, { payload }) => {
             state.isLoading = payload;
         },
@@ -110,6 +122,9 @@ export const {
     setCityFilterOptions,
     setDailyrentStartDate,
     setDailyrentEndDate,
+    setDailyrentCity,
+    setSelectedCityPopUpOptions,
+    setCityPopUpOpen,
     setIsLoading,
     setError,
 } = landingPageFilterSlice.actions;

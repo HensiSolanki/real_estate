@@ -288,3 +288,16 @@ export const dailyRentCardDemoListings = [
     },
 
 ];
+
+export const cityPopUpOptions = [
+    { id: "abc", count: 100 },
+    { id: "xyz", count: 200 },
+    { id: "def", count: 300 },
+    { id: "ghi", count: 400 },
+    { id: "jkl", count: 500 },
+    { id: "mno", count: 600 },
+    { id: "pqr", count: 700 },
+    { id: "stu", count: 800 },
+    { id: "vwx", count: 900 },
+    { id: "yza", count: 1000 },
+];
