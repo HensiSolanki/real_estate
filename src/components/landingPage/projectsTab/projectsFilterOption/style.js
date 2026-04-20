@@ -116,7 +116,7 @@ export const CityPill = styled.button`
   align-items: center;
   justify-content: center;
   border: 1px solid
-    ${({ $active }) => ($active ? "var(--color-brand)" : "#e5e7eb")};
+    ${({ $active }) => ($active ? "rgba(206, 17, 38, 0.55)" : "#e5e7eb")};
   border-radius: 6px;
   background: ${({ $active }) =>
     $active ? "var(--color-brand-soft)" : "#ffffff"};

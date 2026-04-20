@@ -1,3 +1,5 @@
+import { IconBuildingSvg, IconCalendarSvg, IconFilterSlidersSvg, IconMapFoldedSvg, IconSofaPropertySvg } from "@/assets";
+
 /** Keys must match `FEATURE_ICON_MAP` (asset components) in `realEstateCardComponent/index.js`. */
 export const realEstateCardFeatureOptions = [
     { id: "area", iconKey: "ruler", text: "432 m² area" },
@@ -202,4 +204,87 @@ export const cityFilterOptions = [
     { id: "khobar", count: 6655 },
     { id: "medina", count: 4634 },
     { id: "mecca", count: 3918 },
+];
+
+
+
+//Daily rent 
+export const dailyRentFilterOptions = [
+    { id: "date", label: "20 - 22 Apr · 2 nights", icon: IconCalendarSvg },
+    { id: "city", label: "Choose city", icon: IconMapFoldedSvg },
+    { id: "filters", label: "Filters", icon: IconFilterSlidersSvg },
+];
+
+export const dailyRentCardDemoListings = [
+    {
+        id: "daily-1",
+        badge: "Furnished",
+        title: "Furnished Apartment for Booking",
+        location: "Al Marwah, Jeddah",
+        details: "99m² · 3 beds · 2 baths · 1 living",
+        price: "1,296 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+    {
+        id: "daily-2",
+        badge: "Luxury",
+        title: "Furnished Apartment for Booking",
+        location: "An Narjis, Riyadh",
+        details: "60m² · 1 bed · 1 bath · 1 living",
+        price: "528 ريال",
+        nights: "Two nights",
+        icon: IconSofaPropertySvg,
+    },
+    {
+        id: "daily-3",
+        badge: "Family",
+        title: "Family Apartment for Booking",
+        location: "Al Zahra, Jeddah",
+        details: "84m² · 2 beds · 2 baths · 1 living",
+        price: "860 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+    {
+        id: "daily-4",
+        badge: "Family",
+        title: "Family Apartment for Booking",
+        location: "Al Zahra, Jeddah",
+        details: "84m² · 2 beds · 2 baths · 1 living",
+        price: "860 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+    {
+        id: "daily-5",
+        badge: "Family",
+        title: "Family Apartment for Booking",
+        location: "Al Zahra, Jeddah",
+        details: "84m² · 2 beds · 2 baths · 1 living",
+        price: "860 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+    {
+        id: "daily-6",
+        badge: "Family",
+        title: "Family Apartment for Booking",
+        location: "Al Zahra, Jeddah",
+        details: "84m² · 2 beds · 2 baths · 1 living",
+        price: "860 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+    {
+        id: "daily-7",
+        badge: "Family",
+        title: "Family Apartment for Booking",
+        location: "Al Zahra, Jeddah",
+        details: "84m² · 2 beds · 2 baths · 1 living",
+        price: "860 ريال",
+        nights: "Two nights",
+        icon: IconBuildingSvg,
+    },
+
 ];

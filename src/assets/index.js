@@ -1,5 +1,7 @@
 import IconArrowUpRightSvg from "./IconArrowUpRightSvg.svg";
+import IconBathLineSvg from "./IconBathLineSvg.svg";
 import IconBathPropertySvg from "./IconBathPropertySvg.svg";
+import IconBedLineSvg from "./IconBedLineSvg.svg";
 import IconBedPropertySvg from "./IconBedPropertySvg.svg";
 import IconBuildingSvg from "./IconBuildingSvg.svg";
 import IconCalendarSvg from "./IconCalendarSvg.svg";
@@ -21,7 +23,9 @@ import IconFilterSlidersSvg from "./IconFilterSlidersSvg.svg";
 
 export {
   IconArrowUpRightSvg,
+  IconBathLineSvg,
   IconBathPropertySvg,
+  IconBedLineSvg,
   IconBedPropertySvg,
   IconBuildingSvg,
   IconCalendarSvg,

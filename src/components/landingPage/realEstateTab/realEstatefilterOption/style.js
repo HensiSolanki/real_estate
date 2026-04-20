@@ -133,7 +133,7 @@ export const SegmentButton = styled.button`
     $active ? "var(--color-brand-soft)" : "transparent"};
   color: ${({ $active }) => ($active ? "var(--color-brand)" : "#1f2937")};
   box-shadow: ${({ $active }) =>
-    $active ? "inset 0 0 0 1px var(--color-brand)" : "none"};
+    $active ? "inset 0 0 0 1px rgba(206, 17, 38, 0.55)" : "none"};
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
@@ -162,7 +162,6 @@ export const SegmentButton = styled.button`
   &:hover {
     background: var(--color-brand-soft);
     color: var(--color-brand);
-    box-shadow: inset 0 0 0 1px var(--color-brand);
   }
 
   &:focus-visible {

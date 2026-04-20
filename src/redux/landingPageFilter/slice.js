@@ -4,6 +4,14 @@ import {
     listingOptionsFilter,
     propertyOptionsFilter,
 } from "@/constants/options";
+import {
+    formatDateKey,
+    getTomorrowDate,
+    normalizeDate,
+} from "@/utils/globalFunctions";
+
+const todayDate = normalizeDate(new Date());
+const tomorrowDate = getTomorrowDate(todayDate);
 
 const initialState = {
     listingOptions: listingOptionsFilter[0],
@@ -16,6 +24,11 @@ const initialState = {
     isLoading: false,
     error: null,
     cityFilterOptions: defaultCityFilterOptions,
+
+    //daily rent tab
+    dailyrentStartDate: formatDateKey(todayDate),
+    dailyrentEndDate: formatDateKey(tomorrowDate),
+    dailyrentCity: "Riyadh",
 };
 
 const landingPageFilterSlice = createSlice({
@@ -45,6 +58,13 @@ const landingPageFilterSlice = createSlice({
         },
         setCityFilterOptions: (state, { payload }) => {
             state.cityFilterOptions = payload;
+        },
+        //daily rent tab
+        setDailyrentStartDate: (state, { payload }) => {
+            state.dailyrentStartDate = payload;
+        },
+        setDailyrentEndDate: (state, { payload }) => {
+            state.dailyrentEndDate = payload;
         },
         setIsLoading: (state, { payload }) => {
             state.isLoading = payload;
@@ -88,6 +108,8 @@ export const {
     setCallNowPopupTargetId,
     setSelectedProjectCardId,
     setCityFilterOptions,
+    setDailyrentStartDate,
+    setDailyrentEndDate,
     setIsLoading,
     setError,
 } = landingPageFilterSlice.actions;
