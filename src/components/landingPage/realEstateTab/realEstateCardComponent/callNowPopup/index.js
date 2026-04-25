@@ -23,7 +23,7 @@ const CallNowPopup = ({
     agentName,
     agentInitials,
     agentPhone,
-    agencyName = "AQAR PROPERTIES",
+    agencyName = "Property 973",
 }) => {
     if (!open) return null;
 

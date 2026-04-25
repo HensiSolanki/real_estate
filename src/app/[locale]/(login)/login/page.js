@@ -60,8 +60,8 @@ const LoginPage = () => {
         <BrandRow>
           <BrandIcon>🏠</BrandIcon>
           <div>
-            <BrandName>Aqar</BrandName>
-            <BrandSubtext>Saudi trusted property platform</BrandSubtext>
+            <BrandName>Property 973</BrandName>
+            <BrandSubtext>Saudi&apos;s trusted property platform</BrandSubtext>
           </div>
         </BrandRow>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import type { FC } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,11 +11,10 @@ import {
   IconChartSvg,
   IconMapFoldedSvg,
   IconUserFramedSvg,
-  SaudiMapSilhouetteSvg,
 } from "@/assets";
 import AddButtonPopUp from "@/components/Header/AddButtonPopUp/AddButtonPopUp";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { Link, useRouter } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { setAddButtonPopUp, setHeaderTabOptions } from "@/redux/header/slice";
 
 type TabIcon = FC<{ className?: string }>;
@@ -57,28 +57,21 @@ export default function Header() {
     >
       <div className="relative mx-auto flex h-[52px] w-full min-w-0 max-w-[1280px] items-center px-[7px] min-[641px]:px-[32px] lg:px-[110px]">
         <div className="flex min-w-0 flex-1 justify-start">
-          <Link
-            href="/"
-            onClick={() => dispatch(setHeaderTabOptions(0))}
+          <button
+            type="button"
+            suppressHydrationWarning
+            onClick={() => router.push("/")}
             className="flex shrink-0 items-center gap-2.5 outline-none focus-visible:ring-2 focus-visible:ring-brand/25"
           >
-            <div className="flex flex-col items-end leading-none text-brand">
-              <span
-                className="text-[1.0625rem] font-bold tracking-tight"
-                dir="rtl"
-                lang="ar"
-                style={{
-                  fontFamily: "var(--font-noto-arabic), system-ui, sans-serif",
-                }}
-              >
-                {t("brandArabic")}
-              </span>
-              <span className="mt-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.22em]">
-                {t("brandLatin")}
-              </span>
-            </div>
-            <SaudiMapSilhouetteSvg className="h-9 w-[1.85rem] shrink-0 text-brand" />
-          </Link>
+            <Image
+              src="/property973-logo.png"
+              alt="Property 973"
+              width={220}
+              height={58}
+              className="h-9 w-auto shrink-0"
+              priority
+            />
+          </button>
         </div>
 
         <nav

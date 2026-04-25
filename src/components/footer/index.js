@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Link, usePathname } from "@/i18n/navigation";
@@ -57,16 +58,13 @@ const Footer = () => {
                     <TopBand>
                         <div>
                             <LogoMark>
-                                <span
-                                    dir="rtl"
-                                    lang="ar"
-                                    style={{
-                                        fontFamily: "var(--font-noto-arabic), system-ui, sans-serif",
-                                    }}
-                                >
-                                    {t("brandArabic")}
-                                </span>{" "}
-                                <span className="uppercase tracking-[0.12em]">{t("brandLatin")}</span>
+                                <Image
+                                    src="/property973-logo.png"
+                                    alt="Property 973"
+                                    width={320}
+                                    height={84}
+                                    className="h-12 w-auto shrink-0 md:h-14"
+                                />
                             </LogoMark>
                             <LogoSub>{t("logoSub")}</LogoSub>
                             <Tagline>{t("tagline")}</Tagline>

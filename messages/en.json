@@ -1,11 +1,10 @@
 {
   "Metadata": {
-    "title": "Aqar — Real estate in Saudi Arabia",
+    "title": "Property 973 — Real estate in Saudi Arabia",
     "description": "Find properties, projects, and daily rent across Saudi Arabia."
   },
   "Header": {
     "brandArabic": "عقار",
-    "brandLatin": "AQAR",
     "realEstate": "Real Estate",
     "projects": "Projects",
     "dailyRent": "Daily Rent",
@@ -40,7 +39,7 @@
       "listTypeHeading": "What are you trying to list?",
       "option1": {
         "hint": "List a property from owner / representative",
-        "title": "With license issuance through Aqar platform",
+        "title": "With license issuance through Property 973 platform",
         "badge": "License required"
       },
       "option2": {
@@ -53,7 +52,6 @@
   "Footer": {
     "ariaLabel": "Site footer",
     "brandArabic": "عقار",
-    "brandLatin": "AQAR",
     "logoSub": "Saudi Arabia's trusted real estate platform",
     "tagline": "Buy, rent, and invest in properties across Saudi Arabia — from apartments to villas and commercial spaces.",
     "googlePlay": "Google Play",
@@ -85,7 +83,7 @@
     "coTerms": "Terms & Conditions",
     "coContact": "Contact Us",
     "coDonation": "Quick donation service",
-    "copyright": "© {year} Aqar App. All rights reserved.",
+    "copyright": "© {year} Property 973 App. All rights reserved.",
     "licenseLine": "Licensed by Ministry of Tourism for booking units · Lic. 73106505",
     "badgeVat": "VAT Registered",
     "badgeMinistry": "Ministry Approved",
