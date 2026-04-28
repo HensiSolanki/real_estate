@@ -85,7 +85,10 @@ export default function Header() {
                 key={index}
                 type="button"
                 suppressHydrationWarning
-                onClick={() => {dispatch(setHeaderTabOptions(index)); router.push("/")}}
+                onClick={() => {
+                  dispatch(setHeaderTabOptions(index));
+                  router.push("/");
+                }}
                 className={[
                   "flex shrink-0 items-center gap-1.5 border-b-2 pb-1 text-[12px] transition-colors sm:gap-2 sm:text-[13px] lg:text-[14px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-sm",
                   active
@@ -113,7 +116,6 @@ export default function Header() {
                 onClick={() => {
                   if (item.openAddPopup) {
                     dispatch(setAddButtonPopUp(true));
-                    dispatch(setHeaderTabOptions(null));
                   } else if (item.path) {
                     router.push(item.path);
                     dispatch(setHeaderTabOptions(null));
@@ -162,7 +164,10 @@ export default function Header() {
           <button
             type="button"
             suppressHydrationWarning
-            onClick={() => {router.push("/login"); dispatch(setHeaderTabOptions(null))}}
+            onClick={() => {
+              router.push("/login");
+              dispatch(setHeaderTabOptions(null));
+            }}
             className="group rounded p-1.5 text-muted transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/25"
             aria-label={t("login")}
           >
@@ -185,7 +190,10 @@ export default function Header() {
                 key={index}
                 type="button"
                 suppressHydrationWarning
-                onClick={() => {dispatch(setHeaderTabOptions(index)); router.push("/")}}
+                onClick={() => {
+                  dispatch(setHeaderTabOptions(index));
+                  router.push("/");
+                }}
                 className={[
                   "flex flex-1 items-center justify-center gap-2 border-b-[3px] px-1 py-3 text-[0.95rem] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/25 focus-visible:ring-inset",
                   active

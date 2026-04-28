@@ -31,6 +31,12 @@ import IconBookingChaletSvg from "./IconBookingChaletSvg.svg";
 import IconBookingCampSvg from "./IconBookingCampSvg.svg";
 import IconBookingFarmSvg from "./IconBookingFarmSvg.svg";
 import IconBookingHallSvg from "./IconBookingHallSvg.svg";
+import IconBriefcaseSvg from "./IconBriefcaseSvg.svg";
+import IconChevronRightSvg from "./IconChevronRightSvg.svg";
+import IconHouseLineSvg from "./IconHouseLineSvg.svg";
+import IconOwnerRoleSvg from "./IconOwnerRoleSvg.svg";
+import IconAddMenuListingHouseSvg from "./IconAddMenuListingHouseSvg.svg";
+import IconAddMenuPropertySearchSvg from "./IconAddMenuPropertySearchSvg.svg";
 
 export {
   IconArrowUpRightSvg,
@@ -66,4 +72,10 @@ export {
   IconBookingCampSvg,
   IconBookingFarmSvg,
   IconBookingHallSvg,
+  IconBriefcaseSvg,
+  IconChevronRightSvg,
+  IconHouseLineSvg,
+  IconOwnerRoleSvg,
+  IconAddMenuListingHouseSvg,
+  IconAddMenuPropertySearchSvg,
 };
