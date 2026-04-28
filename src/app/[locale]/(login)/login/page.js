@@ -61,7 +61,7 @@ const LoginPage = () => {
           <BrandIcon>🏠</BrandIcon>
           <div>
             <BrandName>Property 973</BrandName>
-            <BrandSubtext>Saudi&apos;s trusted property platform</BrandSubtext>
+            <BrandSubtext> Real estate Marketplace</BrandSubtext>
           </div>
         </BrandRow>
 

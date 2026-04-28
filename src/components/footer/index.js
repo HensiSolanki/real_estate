@@ -90,8 +90,8 @@ const Footer = () => {
                             <ColLink href="#">{t("searchVillasSale")}</ColLink>
                             <ColLink href="#">{t("searchFloorsRent")}</ColLink>
                             <ColLink href="#">{t("searchLandsSale")}</ColLink>
-                            <ColLink href="#">{t("searchRentRiyadh")}</ColLink>
-                            <ColLink href="#">{t("searchRentJeddah")}</ColLink>
+                            <ColLink href="#">{t("searchRentJuffair")}</ColLink>
+                            <ColLink href="#">{t("searchRentSeef")}</ColLink>
                         </div>
                         <div>
                             <ColTitle>{t("colServices")}</ColTitle>

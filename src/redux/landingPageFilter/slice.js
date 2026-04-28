@@ -16,6 +16,7 @@ const tomorrowDate = getTomorrowDate(todayDate);
 const initialState = {
     listingOptions: listingOptionsFilter[0],
     propertyOptions: propertyOptionsFilter[0],
+   
     selectedCity: null,
     callNowPopupOpen: false,
     callNowPopupTargetId: null,
@@ -33,6 +34,11 @@ const initialState = {
     cityPopUpOpen: false,
     filtersPopUpOpen: false,
     selectedCityPopUpOptions: null,
+
+
+    //searches page searchListingType: "rent",
+    selectedPropertySearchOption: null,
+    selectedRentOrSaleOption: null,
 };
 
 const landingPageFilterSlice = createSlice({
@@ -44,6 +50,12 @@ const landingPageFilterSlice = createSlice({
         },
         setPropertyOptions: (state, { payload }) => {
             state.propertyOptions = payload;
+        },
+        setSelectedPropertySearchOption: (state, { payload }) => {
+            state.selectedPropertySearchOption = payload;
+        },
+        setSelectedRentOrSaleOption: (state, { payload }) => {
+            state.selectedRentOrSaleOption = payload;
         },
         setSelectedCity: (state, { payload }) => {
             state.selectedCity = payload;
@@ -130,6 +142,8 @@ export const {
     setFiltersPopUpOpen,
     setSelectedCityPopUpOptions,
     setCityPopUpOpen,
+    setSelectedPropertySearchOption,
+    setSelectedRentOrSaleOption,
     setIsLoading,
     setError,
 } = landingPageFilterSlice.actions;

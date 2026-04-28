@@ -1,11 +1,10 @@
 {
   "Metadata": {
-    "title": "عقار — العقارات في المملكة العربية السعودية",
-    "description": "اعثر على العقارات والمشاريع والإيجار اليومي في جميع أنحاء المملكة."
+    "title": "بروبرتي 973 — سوق العقارات",
+    "description": "اعثر على العقارات والمشاريع والإيجار اليومي، كل ذلك في مكان واحد."
   },
   "Header": {
     "brandArabic": "عقار",
-    "brandLatin": "AQAR",
     "realEstate": "العقارات",
     "projects": "المشاريع",
     "dailyRent": "الإيجار اليومي",
@@ -53,14 +52,13 @@
   "Footer": {
     "ariaLabel": "تذييل الموقع",
     "brandArabic": "عقار",
-    "brandLatin": "AQAR",
-    "logoSub": "منصة عقارية موثوقة في المملكة العربية السعودية",
-    "tagline": "اشتري، أجر، واستثمر في العقارات في أنحاء المملكة — من الشقق إلى الفلل والمساحات التجارية.",
+    "logoSub": "اعثر على العقارات والمشاريع والإيجار اليومي، كل ذلك في مكان واحد.",
+    "tagline": "اشترِ واستأجر واستثمر في العقارات — من الشقق إلى الفلل والمساحات التجارية.",
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appGallery": "AppGallery",
     "ctaTitle": "أدرج عقارك اليوم",
-    "ctaSub": "تواصل مع آلاف المشترين والمستأجرين في أنحاء المملكة.",
+    "ctaSub": "وصل إعلانك إلى آلاف المشترين والمستأجرين في مختلف المناطق.",
     "ctaButton": "+ أضف إعلانًا",
     "colSearch": "خيارات البحث",
     "colServices": "الخدمات",
@@ -71,8 +69,8 @@
     "searchVillasSale": "فلل للبيع",
     "searchFloorsRent": "أدوار للإيجار",
     "searchLandsSale": "أراضي للبيع",
-    "searchRentRiyadh": "إيجار في الرياض",
-    "searchRentJeddah": "إيجار في جدة",
+    "searchRentJuffair": "إيجار في الجفير",
+    "searchRentSeef": "إيجار في السيف",
     "svcPay": "دفع الخدمات",
     "svcEjar": "عقود إيجار",
     "svcPromote": "ترويج الإعلانات",
@@ -85,7 +83,7 @@
     "coTerms": "الشروط والأحكام",
     "coContact": "اتصل بنا",
     "coDonation": "خدمة التبرع السريع",
-    "copyright": "© {year} تطبيق عقار. جميع الحقوق محفوظة.",
+    "copyright": "© {year} تطبيق Property 973. جميع الحقوق محفوظة.",
     "licenseLine": "مرخّص من وزارة السياحة لحجز الوحدات · ترخيص 73106505",
     "badgeVat": "مسجّل ضريبة القيمة المضافة",
     "badgeMinistry": "معتمد من الوزارة",
@@ -113,11 +111,10 @@
     "cityPanelRegion": "تصفية حسب المدينة",
     "cityPanelTitle": "مدن شائعة",
     "cityOptionAria": "{city}، {count} إعلان",
-    "city_riyadh": "الرياض",
-    "city_jeddah": "جدة",
-    "city_dammam": "الدمام",
-    "city_khobar": "الخبر",
-    "city_medina": "المدينة المنورة",
-    "city_mecca": "مكة المكرمة"
+    "city_juffair": "الجفير",
+    "city_seef": "السيف",
+    "city_saar": "سار",
+    "city_busaiteen": "البسيتين",
+    "city_hidd": "الحد"
   }
 }

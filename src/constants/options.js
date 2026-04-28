@@ -18,11 +18,11 @@ export const realEstateCardDefaultListing = {
     ],
     priceAnnual: "SAR 65,000",
     priceSub: "/annually · SAR 5,417/mo",
-    title: "Apartment for Rent in Riyadh Al Arid",
-    location: "Al-Arid District · Riyadh, Saudi Arabia",
+    title: "Apartment for Rent Juffair",
+    location: "Juffair, Bahrain",
     features: realEstateCardFeatureOptions,
     description:
-        "Luxury apartment for annual rent in Al-Arid district, ref a1005. Spacious layout with premium finishes. Immediate response upon contact.",
+        "Luxury apartment for annual rent in Juffair, Bahrain. Spacious layout with premium finishes. Immediate response upon contact.",
     agentInitials: "AR",
     agentName: "Ahmed Real Estate",
     agentPhone: "+91 98765 43210",
@@ -35,8 +35,8 @@ export const realEstateCardDefaultListing = {
 export const realEstateCardDemoListings = [
     {
         id: "demo-1",
-        title: "Apartment for Rent in Riyadh Al Arid",
-        location: "Al-Arid District · Riyadh, Saudi Arabia",
+        title: "Apartment for Rent Juffair",
+        location: "Juffair, Bahrain",
         priceAnnual: "SAR 65,000",
         priceSub: "/annually · SAR 5,417/mo",
         photoLabel: "1/6 photos",
@@ -44,8 +44,8 @@ export const realEstateCardDemoListings = [
     },
     {
         id: "demo-2",
-        title: "Villa for Rent in Al Nakheel",
-        location: "Al Nakheel · Riyadh, Saudi Arabia",
+        title: "Villa for Rent Juffair",
+        location: "Juffair, Bahrain",
         priceAnnual: "SAR 120,000",
         priceSub: "/annually · SAR 10,000/mo",
         photoLabel: "1/8 photos",
@@ -58,8 +58,8 @@ export const realEstateCardDemoListings = [
     },
     {
         id: "demo-3",
-        title: "Modern Apartment in Al Yasmin",
-        location: "Al Yasmin · Riyadh, Saudi Arabia",
+        title: "Modern Apartment in Juffair",
+        location: "Juffair, Bahrain",
         priceAnnual: "SAR 48,000",
         priceSub: "/annually · SAR 4,000/mo",
         photoLabel: "1/4 photos",
@@ -71,21 +71,21 @@ export const realEstateCardDemoListings = [
     },
     {
         id: "demo-4",
-        title: "Spacious Duplex in Al Malqa",
-        location: "Al Malqa · Riyadh, Saudi Arabia",
+        title: "Spacious Duplex in Juffair",
+        location: "Juffair, Bahrain",
         priceAnnual: "SAR 95,000",
         priceSub: "/annually · SAR 7,917/mo",
         photoLabel: "1/12 photos",
         listedAgo: "Listed 3 days ago",
         description:
             "Duplex with private entrance, two parking spots, and close to schools. Ref m2044.",
-        agentName: "Saudi Homes",
+        agentName: "Bahrain Homes",
         agentInitials: "SH",
     },
     {
         id: "demo-5",
-        title: "Penthouse with City View — Al Olaya",
-        location: "Al Olaya · Riyadh, Saudi Arabia",
+        title: "Penthouse with City View — Juffair",
+        location: "Juffair, Bahrain",
         priceAnnual: "SAR 180,000",
         priceSub: "/annually · SAR 15,000/mo",
         photoLabel: "1/10 photos",
@@ -110,8 +110,8 @@ export const projectCardDefaultListing = {
         { label: "For sale", variant: "brand" },
         { label: "Project", variant: "muted" },
     ],
-    title: "Al Bahria Development",
-    location: "Hay Al Baria, Al Jolaan · Riyadh",
+    title: "Juffair Development",
+    location: "Juffair, Bahrain",
     priceMain: "SAR 1.4M",
     priceSub: "starts from",
     features: [
@@ -130,8 +130,8 @@ export const projectCardDefaultListing = {
 export const projectCardDemoListings = [
     {
         id: "proj-1",
-        title: "Al Bahria Development",
-        location: "Hay Al Baria, Al Jolaan · Riyadh",
+        title: "Juffair Development",
+        location: "Juffair, Bahrain",
         tags: [
             { label: "Warehouses", variant: "muted" },
             { label: "Available", variant: "blue" },
@@ -141,8 +141,8 @@ export const projectCardDemoListings = [
     },
     {
         id: "proj-2",
-        title: "Al Yasmin Residences",
-        location: "Al Yasmin · Riyadh",
+        title: "Juffair Residences",
+        location: "Juffair, Bahrain",
         tags: [
             { label: "Apartments", variant: "brand" },
             { label: "Ready", variant: "muted" },
@@ -164,7 +164,7 @@ export const projectCardDemoListings = [
     {
         id: "proj-3",
         title: "Olaya Business Tower",
-        location: "Al Olaya · Riyadh",
+        location: "Juffair, Bahrain",
         tags: [
             { label: "Commercial", variant: "brand" },
             { label: "Off-plan", variant: "muted" },
@@ -198,12 +198,11 @@ export const propertyOptionsFilter = [
 
 /** Demo listing counts per city (replace with API data when available). */
 export const cityFilterOptions = [
-    { id: "riyadh", count: 82910 },
-    { id: "jeddah", count: 33414 },
-    { id: "dammam", count: 7180 },
-    { id: "khobar", count: 6655 },
-    { id: "medina", count: 4634 },
-    { id: "mecca", count: 3918 },
+    { id: "juffair", count: 33414 },
+    { id: "seef", count: 18290 },
+    { id: "saar", count: 7180 },
+    { id: "busaiteen", count: 4634 },
+    { id: "hidd", count: 3918 },
 ];
 
 
@@ -220,7 +219,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-1",
         badge: "Furnished",
         title: "Furnished Apartment for Booking",
-        location: "Al Marwah, Jeddah",
+        location: "Juffair, Bahrain",
         details: "99m² · 3 beds · 2 baths · 1 living",
         price: "1,296 ريال",
         nights: "Two nights",
@@ -230,7 +229,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-2",
         badge: "Luxury",
         title: "Furnished Apartment for Booking",
-        location: "An Narjis, Riyadh",
+        location: "Juffair, Bahrain",
         details: "60m² · 1 bed · 1 bath · 1 living",
         price: "528 ريال",
         nights: "Two nights",
@@ -240,7 +239,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-3",
         badge: "Family",
         title: "Family Apartment for Booking",
-        location: "Al Zahra, Jeddah",
+        location: "Juffair, Bahrain",
         details: "84m² · 2 beds · 2 baths · 1 living",
         price: "860 ريال",
         nights: "Two nights",
@@ -250,7 +249,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-4",
         badge: "Family",
         title: "Family Apartment for Booking",
-        location: "Al Zahra, Jeddah",
+        location: "Juffair, Bahrain",
         details: "84m² · 2 beds · 2 baths · 1 living",
         price: "860 ريال",
         nights: "Two nights",
@@ -260,7 +259,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-5",
         badge: "Family",
         title: "Family Apartment for Booking",
-        location: "Al Zahra, Jeddah",
+        location: "Juffair, Bahrain",
         details: "84m² · 2 beds · 2 baths · 1 living",
         price: "860 ريال",
         nights: "Two nights",
@@ -270,7 +269,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-6",
         badge: "Family",
         title: "Family Apartment for Booking",
-        location: "Al Zahra, Jeddah",
+        location: "Juffair, Bahrain",
         details: "84m² · 2 beds · 2 baths · 1 living",
         price: "860 ريال",
         nights: "Two nights",
@@ -280,7 +279,7 @@ export const dailyRentCardDemoListings = [
         id: "daily-7",
         badge: "Family",
         title: "Family Apartment for Booking",
-        location: "Al Zahra, Jeddah",
+        location: "Juffair, Bahrain",
         details: "84m² · 2 beds · 2 baths · 1 living",
         price: "860 ريال",
         nights: "Two nights",
@@ -300,4 +299,14 @@ export const cityPopUpOptions = [
     { id: "stu", count: 800 },
     { id: "vwx", count: 900 },
     { id: "yza", count: 1000 },
+];
+
+export const searchesPropertyTypeOptions = [
+    "Apartment",
+    "Big flat",
+    "Villa",
+    "Store",
+    "Small house",
+    "Lounge",
+    "Office",
 ];

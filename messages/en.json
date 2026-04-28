@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Property 973 — Real estate in Saudi Arabia",
-    "description": "Find properties, projects, and daily rent across Saudi Arabia."
+    "title": "Property 973 — Real estate Marketplace",
+    "description": "Find properties, projects, and daily rentals all in one place."
   },
   "Header": {
     "brandArabic": "عقار",
@@ -52,13 +52,13 @@
   "Footer": {
     "ariaLabel": "Site footer",
     "brandArabic": "عقار",
-    "logoSub": "Saudi Arabia's trusted real estate platform",
-    "tagline": "Buy, rent, and invest in properties across Saudi Arabia — from apartments to villas and commercial spaces.",
+    "logoSub": "Find properties, projects, and daily rentals all in one place.",
+    "tagline": "Buy, rent, and invest in properties — from apartments to villas and commercial spaces.",
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appGallery": "AppGallery",
     "ctaTitle": "List your property today",
-    "ctaSub": "Reach thousands of buyers and tenants across Saudi Arabia.",
+    "ctaSub": "Reach thousands of buyers and tenants across places",
     "ctaButton": "+ Add Listing",
     "colSearch": "Search options",
     "colServices": "Services",
@@ -69,8 +69,8 @@
     "searchVillasSale": "Villas for sale",
     "searchFloorsRent": "Floors for rent",
     "searchLandsSale": "Lands for sale",
-    "searchRentRiyadh": "Rent in Riyadh",
-    "searchRentJeddah": "Rent in Jeddah",
+    "searchRentJuffair": "Rent in Juffair ",
+    "searchRentSeef": "Rent in Seef ",
     "svcPay": "Pay for Services",
     "svcEjar": "Ejar Contracts",
     "svcPromote": "Promote Listings",
@@ -111,11 +111,10 @@
     "cityPanelRegion": "Filter by city",
     "cityPanelTitle": "Popular cities",
     "cityOptionAria": "{city}, {count} listings",
-    "city_riyadh": "Riyadh",
-    "city_jeddah": "Jeddah",
-    "city_dammam": "Dammam",
-    "city_khobar": "Al Khobar",
-    "city_medina": "Medina",
-    "city_mecca": "Mecca"
+    "city_juffair": "Juffair",
+    "city_seef": "Seef",
+    "city_saar": "Saar",
+    "city_busaiteen": "Busaiteen",
+    "city_hidd": "Hidd"
   }
 }
