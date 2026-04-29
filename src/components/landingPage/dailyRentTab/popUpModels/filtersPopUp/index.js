@@ -10,6 +10,7 @@ import {
     IconBookingFurnishedStudioSvg,
     IconBookingFurnishedVillaSvg,
     IconBookingHallSvg,
+    IconBookingSwimmingPoolSvg,
     CloseIconSvg,
 } from "@/assets";
 import { setFiltersPopUpOpen } from "@/redux/landingPageFilter/slice";
@@ -38,6 +39,7 @@ const BOOKING_TYPE_OPTIONS = [
     { id: "camp", title: "Camp for Booking", icon: IconBookingCampSvg },
     { id: "farm", title: "Farm for Booking", icon: IconBookingFarmSvg },
     { id: "hall", title: "Hall for Booking", icon: IconBookingHallSvg },
+    { id: "swimming-pool", title: "Swimming Pool for Booking", icon: IconBookingSwimmingPoolSvg },
 ];
 
 const BackArrowIcon = () => (

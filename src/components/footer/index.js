@@ -59,11 +59,11 @@ const Footer = () => {
                         <div>
                             <LogoMark>
                                 <Image
-                                    src="/property973-logo.png"
-                                    alt="Property 973"
-                                    width={320}
-                                    height={84}
-                                    className="h-12 w-auto shrink-0 md:h-14"
+                                    src="/vision-2030.svg"
+                                    alt="Vision 2030"
+                                    width={420}
+                                    height={130}
+                                    className="h-16 w-auto shrink-0 md:h-20"
                                 />
                             </LogoMark>
                             <LogoSub>{t("logoSub")}</LogoSub>

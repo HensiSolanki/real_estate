@@ -187,6 +187,13 @@ const CategoryFilterForm = ({ categoryId, onFilter }) => {
                         <AreaRange register={register} />
                     </>
                 );
+            case "swimming-pool":
+                return (
+                    <>
+                        <PriceRange register={register} />
+                        <DateTimeSelection register={register} />
+                    </>
+                );
             default:
                 return null;
         }
@@ -375,6 +382,16 @@ const PriceRange = ({ register }) => (
         <TwoColumn>
             <StyledInput type="number" placeholder="Min price" {...register("minPrice")} />
             <StyledInput type="number" placeholder="Max price" {...register("maxPrice")} />
+        </TwoColumn>
+    </FieldBlock>
+);
+
+const DateTimeSelection = ({ register }) => (
+    <FieldBlock>
+        <FieldLabel>Date and Time</FieldLabel>
+        <TwoColumn>
+            <StyledInput type="date" {...register("bookingDate")} />
+            <StyledInput type="time" {...register("bookingTime")} />
         </TwoColumn>
     </FieldBlock>
 );

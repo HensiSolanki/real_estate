@@ -31,12 +31,14 @@ import IconBookingChaletSvg from "./IconBookingChaletSvg.svg";
 import IconBookingCampSvg from "./IconBookingCampSvg.svg";
 import IconBookingFarmSvg from "./IconBookingFarmSvg.svg";
 import IconBookingHallSvg from "./IconBookingHallSvg.svg";
+import IconBookingSwimmingPoolSvg from "./IconBookingSwimmingPoolSvg.svg";
 import IconBriefcaseSvg from "./IconBriefcaseSvg.svg";
 import IconChevronRightSvg from "./IconChevronRightSvg.svg";
 import IconHouseLineSvg from "./IconHouseLineSvg.svg";
 import IconOwnerRoleSvg from "./IconOwnerRoleSvg.svg";
 import IconAddMenuListingHouseSvg from "./IconAddMenuListingHouseSvg.svg";
 import IconAddMenuPropertySearchSvg from "./IconAddMenuPropertySearchSvg.svg";
+import Vision2030LogoSvg from "./Vision2030LogoSvg.svg";
 
 export {
   IconArrowUpRightSvg,
@@ -72,10 +74,12 @@ export {
   IconBookingCampSvg,
   IconBookingFarmSvg,
   IconBookingHallSvg,
+  IconBookingSwimmingPoolSvg,
   IconBriefcaseSvg,
   IconChevronRightSvg,
   IconHouseLineSvg,
   IconOwnerRoleSvg,
   IconAddMenuListingHouseSvg,
   IconAddMenuPropertySearchSvg,
+  Vision2030LogoSvg,
 };
