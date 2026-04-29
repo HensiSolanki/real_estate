@@ -64,8 +64,8 @@ export default function Header() {
             className="flex shrink-0 items-center gap-2.5 outline-none focus-visible:ring-2 focus-visible:ring-brand/25"
           >
             <Image
-              src="/vision-2030.svg"
-              alt="Vision 2030"
+              src="/property973-logo.png"
+              alt="Property 973"
               width={360}
               height={110}
               className="h-11 w-auto shrink-0"
